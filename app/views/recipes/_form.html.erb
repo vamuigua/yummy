@@ -14,9 +14,15 @@
 		<br>
 		<br>
 		<%= f.label :description %><br>
-		<%= f.text_area :description, label: 'Description', class:"form-contol"%>
+		<%= f.text_area :description, class:"form-contol"%>
 		<br>
 		<br>
+		
+		<%= f.label :picture %><br>
+		<%= f.file_field :picture, class:"form-contol"%>
+		<br>
+		<br>
+		
 		<%= f.button :submit,"Submit", class:"btn btn-primary" %>
 	</div>
 <%end%>

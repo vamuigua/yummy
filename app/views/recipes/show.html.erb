@@ -1,6 +1,6 @@
 <h1><%= @recipe.title %></h1>
 <h2><%= @recipe.description %></h2>
-
+<%= image_tag @recipe.picture_url.to_s, class:"img-upload img-responsive" %>
 <%= link_to "Back", root_path, class: "btn btn-default" %>
 <%= link_to "Edit", edit_recipe_path, class: "btn btn-primary"%>
 <%= link_to 'Destroy', @recipe, method: :delete, data:{confirm:'Are you sure?'}, class:"btn btn-default" %>
