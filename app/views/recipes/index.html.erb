@@ -1,8 +1,13 @@
 <h1>This are the Recipes</h1>
 <% if @recipes.any? %>
-	<% @recipes.each do |recipe| %>
-		<h2><%= link_to recipe.title, recipe%></h2>
-	<%end%>
+	<div class="row">
+		<% @recipes.each do |recipe| %>
+			<div class="col-md-4 recipe image_wrapper">				
+				<%= image_tag recipe.picture_url.to_s, class:"img-upload img-responsive" %>
+				<h2><%= link_to recipe.title, recipe%></h2>
+			</div>
+		<%end%>
+	</div>
 <%else%>
 	<h2>NO RECIPES! :(</h2>	
 <%end%>
