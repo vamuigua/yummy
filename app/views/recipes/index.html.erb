@@ -1,1 +1,8 @@
-<h1>This are recipies#index</h1>
+<h1>This are the Recipes</h1>
+<%= link_to "New Recipe", new_recipe_path%>
+<% if @recipes.any? %>
+<% @recipes.each do |recipe| %>
+	<h2><%= link_to recipe.title, recipe%></h2>
+<%end%>
+<%end%>
+<h2>NO RECIPES! :(</h2>
