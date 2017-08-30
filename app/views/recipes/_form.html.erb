@@ -1,0 +1,16 @@
+<%= simple_form_for @recipe do |f| %>
+	<% if @recipe.errors.any? %>
+		<p><% @recipe.errors.count %></p>
+		<p>Prevented this recipe from saving</p>
+		<ul>
+			<% @recipe.errors.full_mesaages.each do |msg|%>
+			<li><%= msg %></li>
+			<%end%>
+		</ul>
+	<%end%>
+	<div class="panel-body">
+		<%= f.input :title, label: 'Title', class:"form-contol" %>
+		<%= f.input :description, label: 'Description', class:"form-contol"%>
+		<%= f.button :submit,"Submit", class:"btn btn-primary" %>
+	</div>
+<%end%>
